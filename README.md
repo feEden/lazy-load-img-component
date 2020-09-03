@@ -1,6 +1,6 @@
 # lazy-load-img-component
 
-An simple image lazy loading component based on react hooks and IntersectionObserver;
+An simple image lazy load component based on react hooks and IntersectionObserver;
 
 ## Install
 

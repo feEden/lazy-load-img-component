@@ -1,7 +1,7 @@
 {
   "name": "lazy-load-img-component",
   "version": "1.0.1",
-  "description": "An simple image lazy loading component based on react hooks and IntersectionObserver",
+  "description": "An simple image lazy load component based on react hooks and IntersectionObserver",
   "scripts": {
     "build": "rm -rf libs && webpack --config ./config/webpack.config.prod.js",
     "patch": "npm run build && npm version patch && npm publish",
