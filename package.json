@@ -4,9 +4,15 @@
   "description": "An simple image lazy loading component based on react hooks and IntersectionObserver",
   "scripts": {
     "build": "rm -rf libs && webpack --config ./config/webpack.config.prod.js",
-    "pub": "npm run build && npm publish",
-    "dev": "webpack-dev-server --config ./config/webpack.config.dev.js",
-    "report-coverage": "codecov"
+    "patch": "npm run build && npm version patch && npm publish",
+    "minor": "npm run build && npm version minor && npm publish",
+    "major": "npm run build && npm version major && npm publish",
+    "dev": "webpack-dev-server --config ./config/webpack.config.dev.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint --fix"
+    }
   },
   "main": "./libs/index.js",
   "types": "./libs/index.d.ts",
@@ -17,7 +23,8 @@
     "lazy-load-image",
     "react hooks",
     "typescript",
-    "intersection-observer"
+    "intersection-observer",
+    "lazyload-images"
   ],
   "author": {
     "name": "songsong",
@@ -54,10 +61,18 @@
     "@types/node": "^12.12.8",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^4.2.2",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "next",
+    "husky": "^4.2.5",
+    "prettier": "^2.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "style-loader": "^1.2.1",

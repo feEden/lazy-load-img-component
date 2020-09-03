@@ -1,7 +1,7 @@
 declare module '*.css' {
-    const lazyImgWrapper: string;
+    const lazyImgWrapper: any;
     const otherFileds: {
-        [index: string]: string
+        [index: string]: any;
     };
     
 	export {
@@ -11,6 +11,6 @@ declare module '*.css' {
 }
 
 declare module '*.svg' {
-    const value: string;
+    const value: any;
 	export default value;
 }
