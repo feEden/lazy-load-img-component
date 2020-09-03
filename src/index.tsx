@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement, useRef, useEffect, useState } f
 
 import { LazyLoadPropsType } from './interface';
 import styles from './index.module.css';
-import LoadingImg from './assets/loading.svg';
+import LoadingImg from './assets/loading';
 
 // IntersectionObserver polyfill
 require('intersection-observer');
