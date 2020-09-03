@@ -24,27 +24,7 @@ module.exports = {
                     fix: true,
                 },
                 exclude: /node_modules/,
-            },
-            {
-                test: /\.css$/,
-                loaders: ["style-loader", "css-loader"],
-                exclude: /node_modules/,
-            },
-            {
-                test: /\.(jpe?g|png|gif)/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        name: "assets/[name][hash:8].[ext]",
-                    },
-                },
-            },
-            {
-                test: /\.svg/,
-                use: {
-                    loader: "raw-loader",
-                },
-            },
+            }
         ],
     },
 };

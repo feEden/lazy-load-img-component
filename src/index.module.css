@@ -1,8 +1,0 @@
-.lazyImgWrapper {
-    width: 100px;
-    height: 100px;
-}
-
-.lazyImgWrapper > img {
-    cursor: pointer;
-}

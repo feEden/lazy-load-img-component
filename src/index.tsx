@@ -1,7 +1,6 @@
 import React, { FunctionComponent, ReactElement, useRef, useEffect, useState } from 'react';
 
 import { LazyLoadPropsType } from './interface';
-import styles from './index.module.css';
 import LoadingImg from './assets/loading';
 
 // IntersectionObserver polyfill
@@ -38,8 +37,14 @@ const LazyLoadImg: FunctionComponent<LazyLoadPropsType> = ({ src, loadingImg, er
     }, [errorImg, options, src]);
 
     return (
-        <div className={styles.lazyImgWrapper} style={style}>
-            <img src={imgURL} alt="" {...imgOptions} ref={imgRef} style={{ width: '100%', height: '100%' }} />
+        <div
+            style={{
+                width: '100px',
+                height: '100px',
+                ...style,
+            }}
+        >
+            <img src={imgURL} alt="" {...imgOptions} ref={imgRef} style={{ width: '100%', height: '100%', cursor: 'pointer' }} />
         </div>
     );
 };

@@ -25,5 +25,5 @@
     "lib",
     "tests"
   ],
-  "include": ["src/**/*", "types.d.ts"],
+  "include": ["src/**/*"],
 }
